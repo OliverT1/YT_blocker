@@ -1,0 +1,15 @@
+{
+    "name": "Youtube Keyword Blocker",
+    "version": "0.1",
+    "description": "In  the title...",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["jquery.min.js", "block.js"]
+        }
+    ],
+    "permissions": ["storage"],
+    "manifest_version": 2
+}
