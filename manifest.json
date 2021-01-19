@@ -1,15 +1,14 @@
 {
-    "name": "Youtube Keyword Blocker",
+    "name": "Facebook Newsfeed Killer",
     "version": "0.1",
-    "description": "In  the title...",
+    "description": "Removes the newsfeed and stories from facebook",
     "content_scripts": [
         {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": ["jquery.min.js", "block.js"]
+            "matches": [ "*://*.facebook.com/" ],
+            "js": ["jquery.min.js", "block.js"],
+            "run_at": "document_start"
         }
     ],
-    "permissions": ["storage"],
+    
     "manifest_version": 2
 }

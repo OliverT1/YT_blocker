@@ -1,12 +1,12 @@
- console.log("working!");
+function deleteFeed() {
 
-video_titles = $('a#video-title');
+var old_feed = $('[id^=topnews_main_stream], [id^=mostrecent_main_stream], [id^=pagelet_home_stream], [id^=stories_pagelet_below_composer]');
+var new_feed = $('[data-pagelet=Stories], [role=feed]');
 
-console.log(video_titles)
- for (elt of video_titles) {
-     if (elt.textContent.includes("Food")){
-        elt.textContent = "Don't click me!";
-     };
+old_feed.remove();
+new_feed.remove();
 
+}
 
- };
+// Prevent reloading of the newsfeed
+window.setInterval(deleteFeed, 50);
